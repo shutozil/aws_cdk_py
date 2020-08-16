@@ -2,10 +2,10 @@
 
 from aws_cdk import core
 
-from cdk.cdk_stack import CdkStack
+from cdk.test_cdk_project_stack import TestCdkProjectStack
 
 
 app = core.App()
-CdkStack(app, "cdk")
+TestCdkProjectStack(app, "test-cdk-project", env={'region': 'ap-northeast-1'})
 
 app.synth()
