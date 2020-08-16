@@ -9,7 +9,7 @@ class TestCdkProjectStack(core.Stack):
     def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
-        cidr = '10.0.0.0/16'
+        cidr = '24.102.0.0/16'
 
         vpc = aws_ec2.Vpc(
             self,
@@ -27,6 +27,11 @@ class TestCdkProjectStack(core.Stack):
                     name='private',
                     subnet_type=aws_ec2.SubnetType.PRIVATE,
                 ),
+                aws_ec2.SubnetConfiguration(
+                    cidr_mask=24,
+                    name='protected',
+                    subnet_type=aws_ec2.SubnetType.PUBLIC,
+                )
             ],
         )
 
