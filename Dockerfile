@@ -1,5 +1,6 @@
 FROM python:latest
 WORKDIR /app
+
 RUN apt update \
     && apt install -y nodejs npm \
     && apt clean

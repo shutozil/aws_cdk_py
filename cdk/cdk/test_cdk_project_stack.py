@@ -50,7 +50,9 @@ class TestCdkProjectStack(core.Stack):
             connection=aws_ec2.Port.tcp(22),
         )
 
-        image_id = aws_ec2.AmazonLinuxImage(generation=aws_ec2.AmazonLinuxGeneration.AMAZON_LINUX_2).get_image(self).image_id
+        image_id = aws_ec2.AmazonLinuxImage(
+            generation=aws_ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
+        ).get_image(self).image_id
 
         instance_name = env + "-instance"
         aws_ec2.CfnInstance(

@@ -3,11 +3,10 @@ services:
   server:
     build: .
     tty: true
+    container_name: aws-cdk
     volumes:
       - .:/app
     env_file:
       - .env
-    environment:
-      - NODE_ENV=development
 volumes:
   app:
