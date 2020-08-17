@@ -1,0 +1,18 @@
+{
+  "name": "awscdkcommands",
+  "version": "1.0.0",
+  "description": "aws cdk command list",
+  "private" : true,
+  "author": "shutoinoue",
+  "scripts": {
+    "synth": "cdk synth -c env=development",
+    "synth-stg": "cdk synth -c env=staging --profile staging",
+    "synth-prod": "cdk synth -c env=production --profile production",
+    "deploy": "cdk deploy -c env=development",
+    "deploy-stg": "cdk deploy -c env=staging --profile staging",
+    "deploy-prod": "cdk deploy -c env=production --profile production",
+    "bs": "cdk bootstrap -c env=development",
+    "bs-stg": "cdk bootstrap -c env=staging --profile staging",
+    "bs-prod": "cdk bootstrap -c env=production --profile production"
+  }
+}

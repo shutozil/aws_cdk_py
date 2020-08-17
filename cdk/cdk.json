@@ -10,6 +10,10 @@
     "staging": {
       "cidr_ip": "24.102.0.0/16",
       "instance_type": "t2.micro"
+    },
+    "production": {
+      "cidr_ip": "24.102.0.0/16",
+      "instance_type": "t2.micro"
     }
   }
 }

@@ -17,7 +17,7 @@ aws configure set region $CDK_DEFAULT_REGION --profile staging
 aws configure set output json --profile staging
 
 ## production
-# aws configure set aws_access_key_id $STG_AWS_ACCESS_KEY_ID --profile production
-# aws configure set aws_secret_access_key $STG_AWS_SECRET_ACCESS_KEY --profile production
-# aws configure set region $CDK_DEFAULT_REGION --profile production
-# aws configure set output json --profile production
+aws configure set aws_access_key_id $STG_AWS_ACCESS_KEY_ID --profile production
+aws configure set aws_secret_access_key $STG_AWS_SECRET_ACCESS_KEY --profile production
+aws configure set region $CDK_DEFAULT_REGION --profile production
+aws configure set output json --profile production
